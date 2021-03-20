@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "Name": "One Time Ticket",
+    "price": 168,
+    "icon": "https://i.ibb.co/GWXYyMB/tickets-3.png",
+    "cardImg": "https://i.ibb.co/c8rZNxD/Group-33142.png"
+  },
+  {
+    "id": 2,
+    "Name": "One Day Pass",
+    "price": 198,
+    "icon": "https://i.ibb.co/GWXYyMB/tickets-3.png",
+    "cardImg": "https://i.ibb.co/RPbJThC/Group-33143.png"
+  },
+  {
+    "id": 3,
+    "Name": "Monthly Pass",
+    "price": 74,
+    "icon": "https://i.ibb.co/GWXYyMB/tickets-3.png",
+    "cardImg": "https://i.ibb.co/McgHtkH/Group-33144.png"
+  },
+  {
+    "id": 4,
+    "Name": "Annul Pass",
+    "price": 60,
+    "icon": "https://i.ibb.co/GWXYyMB/tickets-3.png",
+    "cardImg": "https://i.ibb.co/sFFmX7k/Group-33145.png"
+  }
+]
