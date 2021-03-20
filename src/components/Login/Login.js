@@ -39,8 +39,11 @@ function Login() {
         .createUserWithEmailAndPassword(user.email, user.password)
         .then((userCredential) => {
           // Signed in
-          var user = userCredential.user;
-          console.log(user);
+          var { email } = userCredential.user;
+          setUser({
+            email: email,
+          });
+          console.log(email);
         })
         .catch((error) => {
           var errorCode = error.code;
@@ -74,7 +77,7 @@ function Login() {
 
   return (
     <div className="form">
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           name="email"
           onChange={handleChange}
@@ -87,7 +90,7 @@ function Login() {
           onBlur={handleBlur}
           type="password"
         />
-        <input type="submit" />
+        <input onClick={handleSubmit} type="submit" />
       </form>
       <Button onClick={googleSignIn}>Continue with Google</Button>
     </div>

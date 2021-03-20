@@ -14,9 +14,6 @@ function TicketsDetail({ ticket }) {
         </Link>
         <h1>${price}</h1>
       </div>
-      <div>
-        <h1>Map</h1>
-      </div>
     </div>
   );
 }
