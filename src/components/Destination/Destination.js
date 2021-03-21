@@ -45,6 +45,9 @@ function Destination() {
           placeholder="To"
           required
         />
+        <br />
+        <label htmlFor="date">Date</label>
+        <input type="date" name="date" />
         <button className="btn btn-primary mt-3 btn-block">Search</button>
         <div>
           <p>

@@ -10,6 +10,10 @@ import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 
 function Login() {
+  const [passwordValidation, setPasswordValidation] = useState({
+    Message: "",
+    color: "",
+  });
   const [user, setUser] = useContext(UserContext);
   const [newUser, setNewUser] = useState(false);
   // initalizing the firebase app
@@ -108,6 +112,14 @@ function Login() {
         console.log(error);
       });
   };
+
+  const handleChange = (e) => {
+    if (e.target.value !== user.password) {
+      setPasswordValidation({ Message: "Not matched", color: "red" });
+    } else {
+      setPasswordValidation({ Message: "Correct", color: "green" });
+    }
+  };
   // const handleSubmit = (e) => {
   //   if (user.email && user.password) {
   //     firebase
@@ -169,6 +181,7 @@ function Login() {
               className="form-control"
               name="name"
               placeholder="Enter your name"
+              required
             />
           )}
           <br />
@@ -189,6 +202,24 @@ function Login() {
             name="password"
             required
           />
+          <br />
+          {newUser && (
+            <>
+              <input
+                className="form-control"
+                type="password"
+                name="confirm-password"
+                placeholder="Confirm Password"
+                onChange={handleChange}
+                required
+              />
+              {user.password && passwordValidation.color === "red" ? (
+                <p style={{ color: "red" }}>{passwordValidation.Message}</p>
+              ) : (
+                <p style={{ color: "green" }}>{passwordValidation.Message}</p>
+              )}
+            </>
+          )}
           <br />
           <input className="btn btn-primary" type="submit" value="submit" />
         </form>
