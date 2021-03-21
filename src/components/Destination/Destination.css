@@ -9,3 +9,9 @@
   grid-template-columns: 300px 800px;
   grid-gap: 60px;
 }
+
+@media only screen and (max-width: 600px) {
+  .destination {
+    grid-template-columns: 400px;
+  }
+}

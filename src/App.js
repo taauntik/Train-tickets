@@ -16,7 +16,15 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 export const UserContext = createContext();
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name: "",
+    email: "",
+    password: "",
+    photo: "",
+    error: "",
+    success: false,
+  });
 
   return (
     <UserContext.Provider value={[user, setUser]}>

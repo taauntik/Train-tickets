@@ -5,6 +5,7 @@ import TicketsDetail from "../TicketsDetail/TicketsDetail";
 
 function Home() {
   const [tickets, setTickets] = useState([]);
+
   useEffect(() => {
     setTickets(data);
   }, []);
